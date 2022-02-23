@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import { Button, LinearProgress } from '@mui/material'
+
 export default function Home() {
   return (
     <div>
@@ -9,6 +11,7 @@ export default function Home() {
       </Head>
       <main >
         <p>Nextjs Portfolio</p>
+        <Button color="primary" variant='outlined'>Update</Button>
       </main>
     </div>
   )
