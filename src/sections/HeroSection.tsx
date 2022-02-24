@@ -4,6 +4,6 @@ type Props = {}
 
 export default function HeroSection({}: Props) {
   return (
-    <div>hero-section</div>
+    <section id="home">hero-section</section>
   )
 }

@@ -10,7 +10,7 @@ import { CacheProvider } from "@emotion/react";
 
 // project-import
 import createEmotionCache from 'createEmotionCache';
-import theme from 'theme';
+import { theme } from 'theme'
 import '../styles/globals.css'
 
 // Client-side cache, shared for the whole session of the user in the browser.

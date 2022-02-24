@@ -1,5 +1,5 @@
 import * as React from 'react';
-import RootSvg, { RootSvgProps } from 'docs/src/icons/RootSvg';
+import RootSvg, { RootSvgProps } from './RootSvg';
 
 export default function SvgMuiLogo(props: RootSvgProps) {
   return (
