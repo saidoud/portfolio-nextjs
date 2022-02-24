@@ -5,6 +5,9 @@ import { StylesProvider, createGenerateClassName } from "@mui/styles";
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 
+// third-party
+import { CacheProvider } from "@emotion/react";
+
 // project-import
 import createEmotionCache from 'createEmotionCache';
 import theme from 'theme';
@@ -31,7 +34,6 @@ function MyApp(props) {
           <Component {...pageProps} />
         </ThemeProvider>
       </CacheProvider>
-      <Component {...pageProps} />
     </StylesProvider>
   );
 }
