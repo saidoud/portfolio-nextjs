@@ -8,19 +8,20 @@ interface HeaderSectionProps {
 
 function HeaderSection({ title }: HeaderSectionProps) {
     return (
-        <Container maxWidth="xs" sx={{ textAlign: 'center' }}>
+        <Container maxWidth="xs" sx={{ textAlign: 'center', my: 4 }}>
             <Typography component="p" variant="h4">
-                <GradientText color="error">{title}</GradientText>
+                <GradientText>{title}</GradientText>
             </Typography>
             <Box
-                sx={(theme) => ({
+                sx={{
                     display: 'block',
-                    height: 3,
+                    height: 4,
+                    borderRadius: 6,
                     width: 50,
                     my: 1.5,
                     mx: 'auto',
-                    backgroundColor: theme.palette.primary.light
-                })}
+                    background: 'linear-gradient(270deg,rgb(19, 173, 199) 0%,rgb(148, 93, 214) 100%)'
+                }}
             />
         </Container>
     );
