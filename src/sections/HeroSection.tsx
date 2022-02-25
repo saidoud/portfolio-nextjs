@@ -4,7 +4,7 @@ import React from 'react';
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import GradientText from 'components/ui-components/GradientText';
 
-export default function HeroSection() {
+function HeroSection() {
     return (
         <section id="home">
             <Box sx={{ overflow: 'hidden' }}>
@@ -16,12 +16,12 @@ export default function HeroSection() {
                         transition: '0.3s'
                     }}
                 >
-                    <Grid container alignItems="center" wrap="nowrap" sx={{ height: '100%', mx: 'auto' }}>
+                    <Grid container wrap="nowrap" sx={{ height: '100%', mx: 'auto' }}>
                         {/* Hero Section Text */}
                         <Grid item md={7} lg={6} sx={{ m: 'auto' }}>
                             <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
-                                <Typography component="h1" variant="h2" sx={{ mb: 2, maxWidth: 500 }}>
-                                    Hi, my name is Said i'm <GradientText>Full Stack Developer</GradientText>
+                                <Typography variant="h3" sx={{ mb: 2, maxWidth: 420 }}>
+                                    Hi, my name is Said i am <GradientText>Full Stack Developer</GradientText>
                                 </Typography>
                                 <Typography color="text.secondary" sx={{ mb: 3, maxWidth: 500 }}>
                                     I’m a software engineer specializing in building (and occasionally designing) exceptional digital
@@ -59,3 +59,5 @@ export default function HeroSection() {
         </section>
     );
 }
+
+export default HeroSection;

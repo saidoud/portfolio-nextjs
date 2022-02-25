@@ -68,6 +68,7 @@ export const theme = createTheme({
         }
     },
     palette: {
+        mode: "dark",
         neutral: {
             100: '#F3F4F6',
             200: '#E5E7EB',
@@ -136,7 +137,7 @@ export const theme = createTheme({
         }
     },
     shape: {
-        borderRadius: 8
+        borderRadius: 5
     },
     shadows: [
         'none',
@@ -166,9 +167,7 @@ export const theme = createTheme({
         '0px 25px 50px rgba(100, 116, 139, 0.25)'
     ],
     typography: {
-        button: {
-            fontWeight: 600
-        },
+
         fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
         body1: {
             fontSize: '1rem',
@@ -209,8 +208,6 @@ export const theme = createTheme({
         },
         h2: {
             fontWeight: 700,
-            fontSize: '3rem',
-            lineHeight: 1.375
         },
         h3: {
             fontWeight: 700,
