@@ -9,7 +9,7 @@ import SvgMuiLogo from 'constants/icons/SvgMuiLogo';
 
 function Header() {
     return (
-        <AppBar position="sticky" color="inherit">
+        <AppBar position="sticky">
             <Container>
                 <Toolbar>
                     {/* Logo Container */}
