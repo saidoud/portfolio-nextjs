@@ -12,7 +12,14 @@ interface ServiceCardProps {
 function ServiceCard({ title }: ServiceCardProps) {
     const theme = useTheme();
     return (
-        <Card variant="elevation">
+        <Card
+            variant="elevation"
+            sx={{
+                ':hover': {
+                    boxShadow: '0 2px 14px 0 rgb(33 150 243 / 10%)'
+                }
+            }}
+        >
             <CardContent>
                 <Grid container justifyContent="center" textAlign={'center'} spacing={2}>
                     <Grid item>

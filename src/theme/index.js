@@ -1,15 +1,45 @@
 import { createTheme } from '@mui/material/styles';
 
+const blue = {
+    50: '#F0F7FF',
+    100: '#C2E0FF',
+    200: '#99CCF3',
+    300: '#66B2FF',
+    400: '#3399FF',
+    main: '#007FFF',
+    500: '#007FFF',
+    600: '#0072E5', // vs blueDark 900: WCAG 4.6 AAA (large), APCA 36 Not for reading text
+    700: '#0059B2',
+    800: '#004C99',
+    900: '#003A75',
+};
+export const blueDark = {
+    50: '#E2EDF8',
+    100: '#CEE0F3',
+    200: '#91B9E3',
+    300: '#5090D3',
+    main: '#5090D3',
+    400: '#265D97',
+    500: '#1E4976',
+    600: '#173A5E',
+    700: '#132F4C', // contrast 13.64:1
+    800: '#001E3C',
+    900: '#0A1929',
+};
+const grey = {
+    50: '#F3F6F9',
+    100: '#E7EBF0',
+    200: '#E0E3E7',
+    300: '#CDD2D7', // vs blueDark 900: WCAG 11.6 AAA, APCA 78 Best for text
+    400: '#B2BAC2', // vs blueDark 900: WCAG 9 AAA, APCA 63.3 Ok for text
+    500: '#A0AAB4', // vs blueDark 900: WCAG 7.5 AAA, APCA 54.3 Only for large text
+    600: '#6F7E8C', // vs white bg: WCAG 4.1 AA, APCA 68.7 Ok for text
+    700: '#3E5060', // vs white bg: WCAG 8.3 AAA, APCA 88.7 Best for text
+    800: '#2D3843', // vs white bg: WCAG 11.9 AAA, APCA 97.3 Best for text
+    900: '#1A2027',
+};
+
 export const theme = createTheme({
-    breakpoints: {
-        values: {
-            xs: 0,
-            sm: 600,
-            md: 1000,
-            lg: 1200,
-            xl: 1920
-        }
-    },
     components: {
         MuiCardContent: {
             styleOverrides: {
@@ -95,7 +125,7 @@ export const theme = createTheme({
         divider: '#E6E8F0',
         primary: {
             main: "#7510F7",
-            // main: '#5048E5',
+            //main: '#5048E5',
             light: '#828DF8',
             dark: '#3832A0',
             contrastText: '#FFFFFF'
@@ -167,66 +197,6 @@ export const theme = createTheme({
         '0px 25px 50px rgba(100, 116, 139, 0.25)'
     ],
     typography: {
-        fontFamily: '"Space Grotesk", sans- serif',
-        body1: {
-            fontSize: '1rem',
-            fontWeight: 400,
-            lineHeight: 1.5
-        },
-        body2: {
-            fontSize: '0.875rem',
-            fontWeight: 400,
-            lineHeight: 1.57
-        },
-        subtitle1: {
-            fontSize: '1rem',
-            fontWeight: 500,
-            lineHeight: 1.75
-        },
-        subtitle2: {
-            fontSize: '0.875rem',
-            fontWeight: 500,
-            lineHeight: 1.57
-        },
-        overline: {
-            fontSize: '0.75rem',
-            fontWeight: 600,
-            letterSpacing: '0.5px',
-            lineHeight: 2.5,
-            textTransform: 'uppercase'
-        },
-        caption: {
-            fontSize: '0.75rem',
-            fontWeight: 400,
-            lineHeight: 1.66
-        },
-        h1: {
-            fontWeight: 700,
-            fontSize: '3.5rem',
-            lineHeight: 1.375
-        },
-        h2: {
-            fontWeight: 700,
-        },
-        h3: {
-            fontWeight: 700,
-            fontSize: '2.25rem',
-            lineHeight: 1.375
-        },
-        h4: {
-            fontWeight: 700,
-            fontSize: '2rem',
-            lineHeight: 1.375
-        },
-        h5: {
-            fontWeight: 600,
-            fontSize: '1.5rem',
-            lineHeight: 1.375
-        },
-        h6: {
-            fontWeight: 600,
-            fontSize: '1.125rem',
-            lineHeight: 1.375
-        }
+        fontFamily: "'Heebo', sans-serif"
     }
 });

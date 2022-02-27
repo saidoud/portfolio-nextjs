@@ -13,15 +13,14 @@ function HeaderSection({ title }: HeaderSectionProps) {
                 <GradientText>{title}</GradientText>
             </Typography>
             <Box
-                sx={{
+                sx={(theme) => ({
                     display: 'block',
-                    height: 4,
+                    height: 3,
                     borderRadius: 6,
                     width: 50,
-                    my: 1.5,
                     mx: 'auto',
-                    background: 'linear-gradient(270deg,rgb(19, 173, 199) 0%,rgb(148, 93, 214) 100%)'
-                }}
+                    backgroundColor: theme.palette.success.light
+                })}
             />
         </Container>
     );
