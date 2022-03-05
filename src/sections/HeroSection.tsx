@@ -1,24 +1,25 @@
 import React from 'react';
+import Image from 'next/image';
 
 // material ui
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
+import { Box, Button, Card, CardMedia, Container, Grid, Typography } from '@mui/material';
 import GradientText from 'components/ui-components/GradientText';
 
 function HeroSection() {
     return (
         <section id="home">
-            <Box sx={{ overflow: 'hidden' }}>
+            <Box sx={{ overflow: 'hidden', pt: 5, height: 'calc(100vh - 100px)' }}>
                 <Container
-                    sx={{
-                        minHeight: 500,
-                        height: 'calc(100vh - 90px)',
-                        maxHeight: { xs: 500, sm: 700, xl: 1000 },
-                        transition: '0.3s'
-                    }}
+                // sx={{
+                //     minHeight: 500,
+                //     height: 'calc(100vh - 90px)',
+                //     maxHeight: { xs: 500, sm: 700, xl: 1000 },
+                //     transition: '0.3s'
+                // }}
                 >
                     <Grid container wrap="nowrap" sx={{ height: '100%', mx: 'auto' }}>
                         {/* Hero Section Text */}
-                        <Grid item sm={12} md={6} sx={{ m: 'auto' }}>
+                        <Grid item sm={12} md={6} lg={6} sx={{ m: 'auto' }}>
                             <Box sx={{ textAlign: { xs: 'center', sm: 'center', md: 'left' } }}>
                                 <Typography variant="h3" sx={{ mb: 2 }}>
                                     Hi, my name is Said Ouddou a <GradientText>Full Stack Developer</GradientText>
@@ -35,22 +36,15 @@ function HeroSection() {
                             </Box>
                         </Grid>
                         {/* Hero Section Image */}
-                        <Grid item sm={6} md={6} sx={{ maxHeight: '100%', display: { xs: 'none', md: 'block' } }}>
-                            <Box
-                                id="hero-container-right-area"
-                                aria-hidden="true"
-                                sx={{
-                                    maxHeight: { md: 700, xl: 1000 },
-                                    transition: 'max-height 0.3s'
-                                }}
-                            >
-                                <img
-                                    src={'assets/Ecommerce campaign-rafiki.svg'}
-                                    alt="hero image background"
-                                    width={'100%'}
-                                    height={'100%'}
-                                />
-                            </Box>
+                        <Grid
+                            item
+                            md={6}
+                            lg={6}
+                            sx={{ width: '100%', display: { xs: 'none', md: 'block' }, m: 'auto' }}
+                            justifyContent="center"
+                            alignItems={'center'}
+                        >
+                            <CardMedia component="img" image="assets/hero/blogging.svg" alt="green iguana" />
                         </Grid>
                     </Grid>
                 </Container>

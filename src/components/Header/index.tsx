@@ -9,7 +9,15 @@ import SvgMuiLogo from 'constants/icons/SvgMuiLogo';
 
 function Header() {
     return (
-        <AppBar position="sticky">
+        <AppBar
+            position="sticky"
+            color="inherit"
+            sx={(theme) => ({
+                backgroundColor: 'rgba(255,255,255,0.72)',
+                backdropFilter: 'blur(20px)',
+                boxShadow: `inset 0px -1px 1px ${theme.palette.mode === 'dark' ? theme.palette.primary.main : theme.palette.grey[100]}`
+            })}
+        >
             <Container>
                 <Toolbar>
                     {/* Logo Container */}
@@ -18,21 +26,11 @@ function Header() {
                     </Box>
                     {/* Navbar Container */}
                     <Stack component={'nav'} direction="row" sx={{ display: { xs: 'none', md: 'block' } }} spacing={2}>
-                        <Button color="inherit" size="small" component={Link} href="#">
-                            Home
-                        </Button>
-                        <Button color="inherit" size="small" component={Link} href="#">
-                            About
-                        </Button>
-                        <Button color="inherit" size="small" component={Link} href="#">
-                            Service
-                        </Button>
-                        <Button color="inherit" size="small" component={Link} href="#">
-                            Portfolio
-                        </Button>
-                        <Button color="inherit" size="small" component={Link} href="#">
-                            Contact
-                        </Button>
+                        {navItem.map((item) => (
+                            <Button key={item} color="inherit" component={Link} href="#" sx={{ textTransform: 'capitalize' }}>
+                                {item}
+                            </Button>
+                        ))}
                     </Stack>
                     {/* Mobile Menu Button */}
                     <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
@@ -45,5 +43,7 @@ function Header() {
         </AppBar>
     );
 }
+
+const navItem = ['home', 'about', 'service', 'portfolio', 'contact'];
 
 export default Header;

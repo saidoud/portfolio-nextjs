@@ -98,7 +98,7 @@ export const theme = createTheme({
         }
     },
     palette: {
-        mode: "dark",
+        mode: "light",
         neutral: {
             100: '#F3F4F6',
             200: '#E5E7EB',
@@ -118,8 +118,12 @@ export const theme = createTheme({
             disabledBackground: 'rgba(55, 65, 81, 0.12)',
             disabled: 'rgba(55, 65, 81, 0.26)'
         },
+        // background: {
+        //     default: '#F9FAFC',
+        //     paper: '#FFFFFF'
+        // },
         background: {
-            default: '#F9FAFC',
+            default: '#fff',
             paper: '#FFFFFF'
         },
         divider: '#E6E8F0',
