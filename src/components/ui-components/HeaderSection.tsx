@@ -1,6 +1,5 @@
 import React from 'react';
-import { Box, Container, Divider, Typography } from '@mui/material';
-import GradientText from './GradientText';
+import { Container, Divider, Typography } from '@mui/material';
 
 interface HeaderSectionProps {
     title: string;
@@ -8,9 +7,9 @@ interface HeaderSectionProps {
 
 function HeaderSection({ title }: HeaderSectionProps) {
     return (
-        <Container>
-            <Divider textAlign="left" sx={{ width: { xs: '70%', md: '40%' } }}>
-                <Typography component="p" variant="h5" align="center" color="primary">
+        <Container maxWidth="xs">
+            <Divider>
+                <Typography component="p" variant="h5" align="center" color="primary" fontWeight={700}>
                     {title}
                 </Typography>
             </Divider>

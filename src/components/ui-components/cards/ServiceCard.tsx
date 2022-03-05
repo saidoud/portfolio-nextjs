@@ -12,27 +12,11 @@ interface ServiceCardProps {
 function ServiceCard({ title }: ServiceCardProps) {
     const theme = useTheme();
     return (
-        <Card
-            variant="elevation"
-            sx={{
-                ':hover': {
-                    boxShadow: '0 2px 14px 0 rgb(33 150 243 / 10%)'
-                }
-            }}
-        >
+        <Card elevation={4} variant="elevation">
             <CardContent>
-                <Grid container justifyContent="center" textAlign={'center'} spacing={2}>
+                <Grid container justifyContent="center" textAlign={'center'} spacing={4}>
                     <Grid item>
-                        <Avatar
-                            size="xl"
-                            variant="rounded"
-                            sx={{
-                                background: theme.palette.primary.light,
-                                color: theme.palette.primary.dark
-                            }}
-                        >
-                            <PaletteTwoToneIcon fontSize="large" />
-                        </Avatar>
+                        <PaletteTwoToneIcon fontSize="large" color="secondary" />
                     </Grid>
                     <Grid item xs={12}>
                         <Typography component={'h3'} variant="h5">

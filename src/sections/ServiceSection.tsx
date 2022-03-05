@@ -7,7 +7,7 @@ function ServiceSection() {
     return (
         <section id="service">
             <HeaderSection title="Service" />
-            <Container>
+            <Container sx={{ py: 5 }}>
                 <Grid container spacing={2}>
                     <Grid item xs={12} sm={6} md={4}>
                         <ServiceCard title="Front End" />
