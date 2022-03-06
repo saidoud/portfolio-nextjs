@@ -9,7 +9,7 @@ function HeaderSection({ title }: HeaderSectionProps) {
     return (
         <Container maxWidth="xs">
             <Divider>
-                <Typography component="p" variant="h5" align="center" color="primary" fontWeight={700}>
+                <Typography component="p" variant="h4" align="center" color="primary">
                     {title}
                 </Typography>
             </Divider>

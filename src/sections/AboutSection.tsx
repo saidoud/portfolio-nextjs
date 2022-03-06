@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Typography } from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 
 // project import
 import HeaderSection from 'components/ui-components/HeaderSection';
