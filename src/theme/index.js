@@ -118,15 +118,10 @@ export const theme = createTheme({
             disabledBackground: 'rgba(55, 65, 81, 0.12)',
             disabled: 'rgba(55, 65, 81, 0.26)'
         },
-        // background: {
-        //     default: '#F9FAFC',
-        //     paper: '#FFFFFF'
-        // },
         background: {
-            default: '#fff',
-            paper: '#fff'
+            default: "#F6F9FC",
+            paper: '#FFFFFF'
         },
-        divider: '#E6E8F0',
         primary: {
             main: "#7510F7",
             //main: '#5048E5',

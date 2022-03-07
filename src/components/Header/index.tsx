@@ -13,7 +13,7 @@ function Header() {
             position="sticky"
             color="inherit"
             sx={(theme) => ({
-                backgroundColor: 'rgba(255,255,255,0.72)',
+                backgroundColor: 'rgba(255,255,255,0.6)',
                 backdropFilter: 'blur(20px)',
                 boxShadow: `inset 0px -1px 1px ${theme.palette.mode === 'dark' ? theme.palette.primary.main : theme.palette.grey[100]}`
             })}
