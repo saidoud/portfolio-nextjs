@@ -7,6 +7,7 @@ import HeroSection from 'sections/HeroSection';
 import AboutSection from 'sections/AboutSection';
 import ServiceSection from 'sections/ServiceSection';
 import ProjectSection from 'sections/ProjectSection';
+import Footer from 'components/Footer';
 
 const Home: NextPage = () => {
     return (
@@ -29,6 +30,7 @@ const Home: NextPage = () => {
                 <ServiceSection />
                 <ProjectSection />
             </main>
+            <Footer />
         </div>
     );
 };

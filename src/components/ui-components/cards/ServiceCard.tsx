@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Grid, Typography } from '@mui/material';
+import { Card, Box, Grid, Typography, CardContent } from '@mui/material';
 import PaletteTwoToneIcon from '@mui/icons-material/PaletteTwoTone';
 
 import Avatar from '../extended/Avatar';
@@ -14,7 +14,7 @@ function ServiceCard({ title }: ServiceCardProps) {
     return (
         <Card elevation={4} variant="elevation">
             <CardContent>
-                <Grid container justifyContent="center" textAlign={'center'} spacing={4}>
+                <Grid container justifyContent="center" textAlign={'center'}>
                     <Grid item>
                         <PaletteTwoToneIcon fontSize="large" color="secondary" />
                     </Grid>

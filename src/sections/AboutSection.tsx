@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import Image from 'next/image';
+import { Box, CardMedia, Container, Grid, Typography } from '@mui/material';
 
 // project import
 import HeaderSection from 'components/ui-components/HeaderSection';
@@ -9,9 +10,9 @@ function AboutSection() {
         <section id="about">
             <HeaderSection title="About Me" />
             <Container sx={{ py: 5 }}>
-                <Grid container spacing={2} justifyContent="center" alignItems={'center'}>
+                <Grid container spacing={5} justifyContent="center" alignItems={'center'}>
                     <Grid item xs={12} md={6}>
-                        <img src="/assets/undraw_developer.svg" width={450} height="auto" />
+                        <Image src="/assets/undraw_developer.svg" layout="responsive" height={100} width={100} />
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <Typography component="p" variant="h6">
