@@ -8,6 +8,7 @@ import AboutSection from 'sections/AboutSection';
 import ServiceSection from 'sections/ServiceSection';
 import ProjectSection from 'sections/ProjectSection';
 import Footer from 'components/Footer';
+import ContactSection from 'sections/ContactSection';
 
 const Home: NextPage = () => {
     return (
@@ -29,6 +30,7 @@ const Home: NextPage = () => {
                 <AboutSection />
                 <ServiceSection />
                 <ProjectSection />
+                <ContactSection />
             </main>
             <Footer />
         </div>

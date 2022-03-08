@@ -7,12 +7,10 @@ interface HeaderSectionProps {
 
 function HeaderSection({ title }: HeaderSectionProps) {
     return (
-        <Container maxWidth="xs">
-            <Divider>
-                <Typography component="p" variant="h4" align="center" color="primary">
-                    {title}
-                </Typography>
-            </Divider>
+        <Container>
+            <Typography component="p" variant="h4" color="primary" gutterBottom>
+                {title}
+            </Typography>
         </Container>
     );
 }

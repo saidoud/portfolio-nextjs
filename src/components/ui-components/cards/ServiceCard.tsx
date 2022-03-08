@@ -12,24 +12,22 @@ interface ServiceCardProps {
 function ServiceCard({ title }: ServiceCardProps) {
     const theme = useTheme();
     return (
-        <Card elevation={4} variant="elevation">
-            <CardContent>
-                <Grid container justifyContent="center" textAlign={'center'}>
-                    <Grid item>
-                        <PaletteTwoToneIcon fontSize="large" color="secondary" />
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Typography component={'h3'} variant="h5">
-                            {title}
-                        </Typography>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Typography variant="body2">
-                            Warm color palates and minimally designed interfaces make the user experience more comfortable.
-                        </Typography>
-                    </Grid>
+        <Card elevation={0} sx={{ background: 'transparent' }}>
+            <Grid container justifyContent="center" textAlign={'center'} spacing={1}>
+                <Grid item>
+                    <PaletteTwoToneIcon fontSize="large" color="secondary" />
                 </Grid>
-            </CardContent>
+                <Grid item xs={12}>
+                    <Typography component={'h3'} variant="h5">
+                        {title}
+                    </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                    <Typography variant="body2">
+                        Warm color palates and minimally designed interfaces make the user experience more comfortable.
+                    </Typography>
+                </Grid>
+            </Grid>
         </Card>
     );
 }
