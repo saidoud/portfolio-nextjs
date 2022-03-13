@@ -12,11 +12,10 @@ function Header() {
     return (
         <AppBar
             position="sticky"
-            elevation={4}
+            elevation={2}
             sx={(theme) => ({
-                backgroundColor: alpha(theme.palette.background.default, 0.72),
-                backdropFilter: 'blur(20px)',
-                boxShadow: `inset 0px -1px 1px ${theme.palette.background.default}`
+                backgroundColor: alpha(theme.palette.background.default, 0.5),
+                backdropFilter: 'blur(30px)'
             })}
         >
             <Container>

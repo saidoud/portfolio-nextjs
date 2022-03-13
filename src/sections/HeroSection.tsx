@@ -8,7 +8,6 @@ import GradientText from 'components/ui-components/GradientText';
 function HeroSection() {
     return (
         <section id="home">
-            {/* <Box sx={{ overflow: 'hidden', pt: 5, height: 'calc(100vh - 100px)' }}> */}
             <Container
                 sx={{
                     minHeight: 500,

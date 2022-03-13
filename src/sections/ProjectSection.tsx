@@ -3,7 +3,7 @@ import { Chip, Container, Grid, Stack } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import ProjectCard from 'components/ui-components/cards/ProjectCard';
-import HeaderSection from 'components/ui-components/HeaderSection';
+import SectionContainer from 'components/ui-components/SectionContainer';
 
 function ProjectSection() {
     const [selected, setSelected] = useState(1);
@@ -16,11 +16,10 @@ function ProjectSection() {
     };
 
     return (
-        <section id="project">
-            <HeaderSection title="Project" />
-            <Container sx={{ py: 4 }}>
-                {/* Filter Section */}
-                <Stack direction="row" justifyContent={'center'} alignItems="center" spacing={4} sx={{ my: 4 }}>
+        <SectionContainer id="project" title="Project" bgColor="#0A1929">
+            {/* Filter Section */}
+            <>
+                <Stack direction="row" justifyContent={'center'} alignItems="center" spacing={3} sx={{ my: 4, mx: 2 }}>
                     {filter.map((item) => (
                         <Chip
                             key={item.id}
@@ -43,8 +42,8 @@ function ProjectSection() {
                         </AnimatePresence>
                     </Grid>
                 </motion.div>
-            </Container>
-        </section>
+            </>
+        </SectionContainer>
     );
 }
 
