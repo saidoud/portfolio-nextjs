@@ -2,6 +2,7 @@ import React from 'react';
 
 // material-ui
 import { AppBar, Box, Button, Container, IconButton, Link, Stack, Toolbar } from '@mui/material';
+import { alpha } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 
 // project-import
@@ -11,11 +12,11 @@ function Header() {
     return (
         <AppBar
             position="sticky"
-            color="inherit"
+            elevation={4}
             sx={(theme) => ({
-                backgroundColor: 'rgba(255,255,255,0.6)',
+                backgroundColor: alpha(theme.palette.background.default, 0.72),
                 backdropFilter: 'blur(20px)',
-                boxShadow: `inset 0px -1px 1px ${theme.palette.mode === 'dark' ? theme.palette.primary.main : theme.palette.grey[100]}`
+                boxShadow: `inset 0px -1px 1px ${theme.palette.background.default}`
             })}
         >
             <Container>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Box, Grid, Typography, CardContent } from '@mui/material';
+import { Card, Box, Grid, Typography, CardContent, CardMedia } from '@mui/material';
 import PaletteTwoToneIcon from '@mui/icons-material/PaletteTwoTone';
 
 import Avatar from '../extended/Avatar';
