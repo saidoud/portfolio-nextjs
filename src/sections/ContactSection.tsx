@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, CardContent, Box, Grid, TextField, Stack, Typography } from '@mui/material';
+import { Button, Card, CardContent, Box, Grid, TextField } from '@mui/material';
 import SectionContainer from 'components/ui-components/SectionContainer';
 
 function ContactSection() {
