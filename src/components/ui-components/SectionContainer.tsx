@@ -13,7 +13,7 @@ function SectionContainer({ id, title, bgColor, children }: SectionProps) {
             <Box
                 sx={(theme) => ({
                     backgroundColor: bgColor ? bgColor : 'inherit',
-                    py: theme.spacing(4)
+                    py: theme.spacing(6)
                 })}
             >
                 <Typography component="p" variant="h4" align="center" color="primary" sx={{ textTransform: 'capitalize' }}>

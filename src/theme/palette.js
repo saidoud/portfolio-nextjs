@@ -11,6 +11,7 @@ export default function themePalette(theme) {
         },
         primary: {
             light: theme.colors?.darkPrimaryLight,
+
             main: theme.colors?.darkPrimaryMain,
             dark: theme.colors?.darkPrimaryDark,
             200: theme.colors?.darkPrimary200,
@@ -59,15 +60,15 @@ export default function themePalette(theme) {
             800: theme.colors?.darkBackground,
             900: theme.colors?.darkPaper
         },
-        text: {
-            primary: theme.darkTextPrimary,
-            secondary: theme.darkTextSecondary,
-            dark: theme.textDark,
-            hint: theme.colors?.grey100
-        },
+        // text: {
+        //     primary: theme.darkTextPrimary,
+        //     secondary: theme.darkTextSecondary,
+        //     dark: theme.textDark,
+        //     hint: theme.colors?.grey100
+        // },
         background: {
             paper: theme.paper,
-            default: theme.backgroundDefault
+            default: "#161C24"
         }
     };
 }

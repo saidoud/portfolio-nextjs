@@ -12,7 +12,6 @@ function Header() {
     return (
         <AppBar
             position="sticky"
-            elevation={2}
             sx={(theme) => ({
                 backgroundColor: alpha(theme.palette.background.default, 0.5),
                 backdropFilter: 'blur(30px)'
