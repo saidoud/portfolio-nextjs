@@ -1,5 +1,5 @@
 import React from 'react';
-import { Chip, Grid, Stack, Typography } from '@mui/material';
+import { Card, CardMedia, Chip, Grid, Stack, Typography } from '@mui/material';
 import { FaReact, FaHtml5, FaCss3, FaJs, FaAtlassian } from 'react-icons/fa';
 
 import SectionContainer from 'components/ui-components/SectionContainer';
@@ -7,9 +7,12 @@ import SectionContainer from 'components/ui-components/SectionContainer';
 function AboutSection() {
     return (
         <SectionContainer id="about" title="About Me" bgColor="#131419">
-            <Grid container spacing={5} justifyContent="center" alignItems={'center'}>
+            <Grid container spacing={5}>
                 <Grid item xs={12} md={5}>
-                    <img src="/assets/undraw_react.svg" height={'auto'} width={'100%'} loading="lazy" />
+                    <Card sx={{ p: 2, height: '100%', background: '#161C24' }}>
+                        <CardMedia component={'img'} src="/assets/undraw_react.svg" height={'auto'} width={'100%'} loading="lazy" />
+                    </Card>
+                    {/* <img src="/assets/undraw_react.svg" height={'auto'} width={'100%'} loading="lazy" /> */}
                 </Grid>
                 <Grid item xs={12} md={7}>
                     <Typography component="p" variant="body1" sx={{ mb: 2 }}>

@@ -8,9 +8,9 @@ interface ServiceCardProps {
 // Props : {Icon / Title / Description /}
 function ServiceCard({ title }: ServiceCardProps) {
     return (
-        <Card variant="outlined">
+        <Card elevation={2}>
             <CardContent>
-                <Grid container justifyContent="center" textAlign={'center'} spacing={1}>
+                <Grid container justifyContent="center" textAlign={'center'} spacing={2}>
                     <Grid item>
                         <PaletteTwoToneIcon fontSize="large" color="secondary" />
                     </Grid>
