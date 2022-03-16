@@ -40,6 +40,7 @@ export const theme = createTheme({
     },
 
     typography: {
-        fontFamily: "'Heebo', sans-serif"
+        //  fontFamily: "'Heebo', sans-serif" ;
+        fontFamily: "'Space Grotesk', sans-serif"
     }
 });

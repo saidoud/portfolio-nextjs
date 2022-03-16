@@ -16,21 +16,26 @@ function SectionContainer({ id, title, bgColor, children }: SectionProps) {
                     py: theme.spacing(6)
                 })}
             >
+                <Typography
+                    component="p"
+                    variant="h3"
+                    align="center"
+                    fontWeight={700}
+                    sx={(theme) => ({
+                        pb: theme.spacing(4),
+                        textTransform: 'capitalize',
+                        background: 'linear-gradient( 121.57deg, #ffffff 18.77%, rgba(255, 255, 255, 0.66) 60.15% )',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent'
+                    })}
+                >
+                    {title}
+                </Typography>
                 <Container
                     sx={(theme) => ({
                         mt: theme.spacing(2)
                     })}
                 >
-                    <Typography
-                        component="p"
-                        variant="h3"
-                        sx={(theme) => ({
-                            pb: theme.spacing(4),
-                            textTransform: 'capitalize'
-                        })}
-                    >
-                        {title}
-                    </Typography>
                     {children}
                 </Container>
             </Box>
