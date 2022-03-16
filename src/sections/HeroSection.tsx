@@ -43,7 +43,7 @@ function HeroSection() {
                         justifyContent="center"
                         alignItems={'center'}
                     >
-                        <CardMedia component="img" image="assets/home_hero.png" height={'100%'} alt="green iguana" />
+                        <CardMedia component="img" image="assets/hero/blogging.svg" height={'100%'} alt="green iguana" />
                     </Grid>
                 </Grid>
             </Container>

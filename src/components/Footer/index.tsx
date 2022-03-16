@@ -12,7 +12,7 @@ const FooterWrapper = styled('div')(({ theme }) => ({
     padding: '35px 0',
 
     color: '#fff',
-    background: '#0c0e30',
+    background: '#101010',
     [theme.breakpoints.down('md')]: {
         textAlign: 'center'
     }
@@ -36,7 +36,7 @@ const FooterLink = styled(Link)({
 const FooterSubWrapper = styled('div')(({ theme }) => ({
     padding: '20px 0',
     color: '#fff',
-    background: '#0c0e30',
+    background: '#101010',
     [theme.breakpoints.down('md')]: {
         textAlign: 'center'
     }

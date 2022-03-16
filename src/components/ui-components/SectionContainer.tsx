@@ -16,14 +16,21 @@ function SectionContainer({ id, title, bgColor, children }: SectionProps) {
                     py: theme.spacing(6)
                 })}
             >
-                <Typography component="p" variant="h4" align="center" color="primary" sx={{ textTransform: 'capitalize' }}>
-                    {title}
-                </Typography>
                 <Container
                     sx={(theme) => ({
                         mt: theme.spacing(2)
                     })}
                 >
+                    <Typography
+                        component="p"
+                        variant="h3"
+                        sx={(theme) => ({
+                            pb: theme.spacing(4),
+                            textTransform: 'capitalize'
+                        })}
+                    >
+                        {title}
+                    </Typography>
                     {children}
                 </Container>
             </Box>

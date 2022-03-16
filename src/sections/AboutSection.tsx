@@ -6,13 +6,13 @@ import SectionContainer from 'components/ui-components/SectionContainer';
 
 function AboutSection() {
     return (
-        <SectionContainer id="about" title="About Me" bgColor="#131419">
+        <SectionContainer id="about" title="About Me" bgColor="#101010">
             <Grid container spacing={5}>
                 <Grid item xs={12} md={5}>
-                    <Card sx={{ p: 2, height: '100%', background: '#161C24' }}>
+                    {/* <Card sx={{ p: 2, height: '100%', background: '#161C24' }}>
                         <CardMedia component={'img'} src="/assets/undraw_react.svg" height={'auto'} width={'100%'} loading="lazy" />
-                    </Card>
-                    {/* <img src="/assets/undraw_react.svg" height={'auto'} width={'100%'} loading="lazy" /> */}
+                    </Card> */}
+                    <img src="/assets/undraw_react.svg" height={'auto'} width={'100%'} loading="lazy" />
                 </Grid>
                 <Grid item xs={12} md={7}>
                     <Typography component="p" variant="body1" sx={{ mb: 2 }}>

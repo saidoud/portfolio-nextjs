@@ -16,7 +16,7 @@ function ProjectSection() {
     };
 
     return (
-        <SectionContainer id="project" title="Project" bgColor="#0A1929">
+        <SectionContainer id="project" title="Project" bgColor="#242424">
             {/* Filter Section */}
             <>
                 <Stack direction="row" justifyContent={'center'} alignItems="center" spacing={3} sx={{ my: 4, mx: 2 }}>

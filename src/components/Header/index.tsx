@@ -22,7 +22,7 @@ function Header() {
                 <Toolbar>
                     {/* Logo Container */}
                     <Box component={Link} href={'#'} aria-label="Go to homepage" sx={{ flexGrow: 1 }}>
-                        <SvgMuiLogo width={30} />
+                        <img src={'assets/logo-dark.svg'} alt="Berry" width="100" />
                     </Box>
                     {/* Navbar Container */}
                     <Stack component={'nav'} direction="row" sx={{ display: { xs: 'none', md: 'block' } }} spacing={2}>

@@ -5,7 +5,7 @@ import SectionContainer from 'components/ui-components/SectionContainer';
 function ContactSection() {
     return (
         <SectionContainer id="contact" title="Contact Us">
-            <Card variant="outlined">
+            <Card>
                 <CardContent>
                     <Grid container rowSpacing={3} spacing={4}>
                         <Grid item xs={12} md={6}>
