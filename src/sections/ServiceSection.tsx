@@ -17,6 +17,15 @@ function ServiceSection() {
                 <Grid item xs={12} sm={6} md={4}>
                     <ServiceCard title="Mobile Development" />
                 </Grid>
+                <Grid item xs={12} sm={6} md={4}>
+                    <ServiceCard title="Front End" />
+                </Grid>
+                <Grid item xs={12} sm={6} md={4}>
+                    <ServiceCard title="Back End" />
+                </Grid>
+                <Grid item xs={12} sm={6} md={4}>
+                    <ServiceCard title="Mobile Development" />
+                </Grid>
             </Grid>
         </SectionContainer>
     );
