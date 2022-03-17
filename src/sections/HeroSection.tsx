@@ -1,9 +1,8 @@
 import React from 'react';
-import Image from 'next/image';
 import Particles from 'react-tsparticles';
 
 // material ui
-import { Box, Button, Card, CardMedia, Container, Grid, Typography } from '@mui/material';
+import { Box, Button, CardMedia, Container, Grid, Typography } from '@mui/material';
 import GradientText from 'components/ui-components/GradientText';
 
 function HeroSection() {
