@@ -1,6 +1,37 @@
 import React, { useRef, useState } from 'react';
 import { ClickAwayListener, IconButton, Box, Collapse } from '@mui/material';
+import { styled } from '@mui/material/styles';
+
 import MenuButton from 'components/ui-components/MenuButton';
+
+const Anchor = styled('a')<{ component?: React.ElementType; noLinkStyle?: boolean }>(({ theme }) => ({
+    ...theme.typography.body2,
+    fontWeight: 700,
+    textDecoration: 'none',
+    border: 'none',
+    width: '100%',
+    backgroundColor: 'transparent',
+    color: theme.palette.mode === 'dark' ? '#fff' : theme.palette.text.secondary,
+    cursor: 'pointer',
+    display: 'flex',
+    alignItems: 'center',
+    padding: theme.spacing(1),
+    borderRadius: 4,
+    transition: theme.transitions.create('background'),
+    '&:hover, &:focus': {
+        backgroundColor: theme.palette.mode === 'dark' ? theme.palette.primary.main : theme.palette.grey[100],
+        // Reset on touch devices, it doesn't add specificity
+        '@media (hover: none)': {
+            backgroundColor: 'transparent'
+        }
+    }
+}));
+
+const UList = styled('ul')({
+    listStyleType: 'none',
+    padding: 0,
+    margin: 0
+});
 
 function HeaderNavDropdown() {
     const [isOpen, setOpen] = useState(false);
@@ -8,7 +39,7 @@ function HeaderNavDropdown() {
 
     return (
         <React.Fragment>
-            <IconButton onClick={() => setOpen(!isOpen)} disableRipple>
+            <IconButton onClick={() => setOpen(!isOpen)} disableRipple ref={hambugerRef}>
                 <MenuButton
                     isOpen={isOpen}
                     strokeWidth="3"
@@ -45,7 +76,33 @@ function HeaderNavDropdown() {
                             overflow: 'auto'
                         }}
                     >
-                        Hello
+                        <UList>
+                            <li>
+                                <Anchor href={'#home'} noLinkStyle>
+                                    Home
+                                </Anchor>
+                            </li>
+                            <li>
+                                <Anchor href={'#about'} noLinkStyle>
+                                    About
+                                </Anchor>
+                            </li>
+                            <li>
+                                <Anchor href={'#about'} noLinkStyle>
+                                    Service
+                                </Anchor>
+                            </li>
+                            <li>
+                                <Anchor href={'#about'} noLinkStyle>
+                                    Portfolio
+                                </Anchor>
+                            </li>
+                            <li>
+                                <Anchor href={'#about'} noLinkStyle>
+                                    Contact
+                                </Anchor>
+                            </li>
+                        </UList>
                     </Box>
                 </Collapse>
             </ClickAwayListener>
