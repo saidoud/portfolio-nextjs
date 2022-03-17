@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // material-ui
 import { AppBar, Box, Button, Container, IconButton, Link, Stack, Toolbar } from '@mui/material';
 import { alpha } from '@mui/material/styles';
-import MenuIcon from '@mui/icons-material/Menu';
 
 // project-import
-import SvgMuiLogo from 'constants/icons/SvgMuiLogo';
+import HeaderNavDropdown from './HeaderNavDropdown';
 
 function Header() {
+    const [isOpen, setOpen] = useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
     return (
         <AppBar
             position="sticky"
@@ -33,10 +38,8 @@ function Header() {
                         ))}
                     </Stack>
                     {/* Mobile Menu Button */}
-                    <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
-                        <IconButton>
-                            <MenuIcon />
-                        </IconButton>
+                    <Box sx={{ display: { md: 'none' }, ml: 1 }}>
+                        <HeaderNavDropdown />
                     </Box>
                 </Toolbar>
             </Container>
