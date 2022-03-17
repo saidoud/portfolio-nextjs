@@ -39,7 +39,7 @@ function HeaderNavDropdown() {
 
     return (
         <React.Fragment>
-            <IconButton onClick={() => setOpen(!isOpen)} disableRipple ref={hambugerRef}>
+            <IconButton color="primary" aria-label="Menu" ref={hambugerRef} onClick={() => setOpen((value) => !value)} disableRipple>
                 <MenuButton
                     isOpen={isOpen}
                     strokeWidth="3"
@@ -52,7 +52,7 @@ function HeaderNavDropdown() {
             <ClickAwayListener
                 onClickAway={(event) => {
                     if (hambugerRef.current && !hambugerRef.current.contains(event.target as Node)) {
-                        setOpen(true);
+                        setOpen(false);
                     }
                 }}
             >
@@ -78,29 +78,19 @@ function HeaderNavDropdown() {
                     >
                         <UList>
                             <li>
-                                <Anchor href={'#home'} noLinkStyle>
-                                    Home
-                                </Anchor>
+                                <Anchor href={'#home'}>Home</Anchor>
                             </li>
                             <li>
-                                <Anchor href={'#about'} noLinkStyle>
-                                    About
-                                </Anchor>
+                                <Anchor href={'#about'}>About</Anchor>
                             </li>
                             <li>
-                                <Anchor href={'#about'} noLinkStyle>
-                                    Service
-                                </Anchor>
+                                <Anchor href={'#about'}>Service</Anchor>
                             </li>
                             <li>
-                                <Anchor href={'#about'} noLinkStyle>
-                                    Portfolio
-                                </Anchor>
+                                <Anchor href={'#about'}>Portfolio</Anchor>
                             </li>
                             <li>
-                                <Anchor href={'#about'} noLinkStyle>
-                                    Contact
-                                </Anchor>
+                                <Anchor href={'#about'}>Contact</Anchor>
                             </li>
                         </UList>
                     </Box>
