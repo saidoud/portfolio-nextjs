@@ -1,11 +1,31 @@
-import React from 'react';
-import Particles from 'react-tsparticles';
+import React, { useState } from 'react';
 
 // material ui
-import { Box, Button, CardMedia, Container, Grid, Typography } from '@mui/material';
-import GradientText from 'components/ui-components/GradientText';
+import { Alert, Box, Button, CardMedia, Container, Grid, Snackbar, Typography } from '@mui/material';
+import ContentCopyRounded from '@mui/icons-material/ContentCopyRounded';
+import CheckRounded from '@mui/icons-material/CheckRounded';
 
-function HeroSection() {
+// thired party
+import Particles from 'react-tsparticles';
+import copy from 'clipboard-copy';
+import { FaTerminal } from 'react-icons/fa';
+
+import GradientText from 'components/ui-components/GradientText';
+import { particlesConfig } from 'constants/particlesConfig';
+
+function HeroSection({ email = 'said.ouddou@gmail.com' }) {
+    const [copied, setCopied] = useState(false);
+
+    const handleCopy = () => {
+        setCopied(true);
+        copy(email).then(() => {
+            setTimeout(() => setCopied(false), 2000);
+        });
+    };
+
+    const handleClose = () => {
+        setCopied(false);
+    };
     return (
         <section id="home">
             <Container
@@ -32,11 +52,32 @@ function HeroSection() {
                                 I’m a software engineer specializing in building (and occasionally designing) exceptional digital
                                 experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.{' '}
                             </Typography>
-                            <Box sx={{ width: { xs: '100%', sm: '100%', md: '40%' } }}>
-                                <Button variant="contained" size="large" fullWidth color="primary">
-                                    Hire Me
-                                </Button>
-                            </Box>
+
+                            <Grid container spacing={2}>
+                                <Grid item xs={12} sm={4}>
+                                    <Button variant="contained" fullWidth color="primary" size="large">
+                                        Hire Me
+                                    </Button>
+                                </Grid>
+                                <Grid item xs={12} sm={7}>
+                                    <Button
+                                        variant="outlined"
+                                        size="large"
+                                        onClick={handleCopy}
+                                        startIcon={<FaTerminal />}
+                                        endIcon={copied ? <CheckRounded /> : <ContentCopyRounded />}
+                                        fullWidth
+                                        color="success"
+                                        disableElevation
+                                        disableFocusRipple
+                                        disableRipple
+                                        disableTouchRipple
+                                        sx={{ display: 'flex', justifyContent: 'space-between', color: 'white' }}
+                                    >
+                                        {email}
+                                    </Button>
+                                </Grid>
+                            </Grid>
                         </Box>
                     </Grid>
                     {/* Hero Section Image */}
@@ -52,133 +93,19 @@ function HeroSection() {
                     </Grid>
                 </Grid>
             </Container>
-            {/* </Box> */}
+            {/* SnackBar */}
+            <Snackbar
+                open={copied}
+                autoHideDuration={1000}
+                onClose={handleClose}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+            >
+                <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+                    Copied to clipboard!
+                </Alert>
+            </Snackbar>
         </section>
     );
 }
-
-const particlesConfig = {
-    // background: {
-    //     position: 'absolute',
-    //     repeat: 'no-repeat',
-    //     size: '100vh',
-    //     opacity: 1
-    // },
-    // backgroundMode: {
-    //     enable: true,
-    //     zIndex: 0
-    // },
-    particles: {
-        number: {
-            value: 218,
-            density: {
-                enable: true,
-                value_area: 800
-            }
-        },
-        color: {
-            value: '#ffffff'
-        },
-        shape: {
-            type: 'circle',
-            stroke: {
-                width: 0,
-                color: '#000000'
-            },
-            polygon: {
-                nb_sides: 5
-            }
-        },
-        opacity: {
-            value: 1,
-            random: true,
-            anim: {
-                enable: true,
-                speed: 1,
-                opacity_min: 0,
-                sync: false
-            }
-        },
-        size: {
-            value: 3,
-            random: true,
-            anim: {
-                enable: false,
-                speed: 4,
-                size_min: 0.3,
-                sync: false
-            }
-        },
-        line_linked: {
-            enable: false,
-            distance: 150,
-            color: '#ffffff',
-            opacity: 0.4,
-            width: 1
-        },
-        move: {
-            enable: true,
-            speed: 1,
-            direction: 'none',
-            random: true,
-            straight: false,
-            out_mode: 'out',
-            bounce: false,
-            attract: {
-                enable: false,
-                rotateX: 600,
-                rotateY: 600
-            }
-        }
-    },
-    interactivity: {
-        detect_on: 'canvas',
-        events: {
-            onhover: {
-                enable: true,
-                mode: 'bubble'
-            },
-            onclick: {
-                enable: true,
-                mode: 'repulse'
-            },
-            resize: true
-        },
-        modes: {
-            grab: {
-                distance: 400,
-                line_linked: {
-                    opacity: 1
-                }
-            },
-            bubble: {
-                distance: 250,
-                size: 0,
-                duration: 2,
-                opacity: 0,
-                speed: 3
-            },
-            repulse: {
-                distance: 400,
-                duration: 0.4
-            },
-            push: {
-                particles_nb: 4
-            },
-            remove: {
-                particles_nb: 2
-            }
-        }
-    },
-    // backgroundMask: {
-    //     composite: 'destination-out'
-    // },
-    fullScreen: {
-        enable: false,
-        zIndex: 1
-    },
-    pauseOnOutsideViewport: true,
-    detectRetina: true
-};
 
 export default HeroSection;
