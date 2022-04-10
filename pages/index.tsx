@@ -9,6 +9,7 @@ import ServiceSection from 'sections/ServiceSection';
 import ProjectSection from 'sections/ProjectSection';
 import Footer from 'components/Footer';
 import ContactSection from 'sections/ContactSection';
+import { skills } from 'constants/skills';
 
 const Home: NextPage = () => {
     return (
@@ -27,7 +28,7 @@ const Home: NextPage = () => {
             <Header />
             <main>
                 <HeroSection />
-                <AboutSection />
+                <AboutSection skills={skills} />
                 <ServiceSection />
                 <ProjectSection />
                 <ContactSection />

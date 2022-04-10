@@ -1,11 +1,10 @@
 import React from 'react';
 import { Card, CardMedia, Chip, Grid, Stack, Typography } from '@mui/material';
-import { FaReact, FaHtml5, FaCss3, FaJs, FaAtlassian, FaNodeJs } from 'react-icons/fa';
 
 import SectionContainer from 'components/ui-components/SectionContainer';
 import SkillsItem from 'components/SkillsItem';
 
-function AboutSection() {
+function AboutSection({ skills }) {
     return (
         <SectionContainer id="about" title="About Me" bgColor="#101010">
             <>
@@ -39,45 +38,12 @@ function AboutSection() {
                 {/* Skills */}
                 <Stack direction={'row'} justifyContent="space-between" sx={{ pt: 6 }}>
                     {skills.map((item, index) => (
-                        <SkillsItem name={item.name} color={item.color} Icon={item.Icon} />
+                        <SkillsItem name={item.name} color={item.color} Icon={item.Icon} key={index} />
                     ))}
                 </Stack>
             </>
         </SectionContainer>
     );
 }
-
-const skills = [
-    {
-        id: 1,
-        name: 'HTML',
-        color: '#E34F26',
-        Icon: FaHtml5
-    },
-    {
-        id: 2,
-        name: 'CSS',
-        color: '#264de4',
-        Icon: FaCss3
-    },
-    {
-        id: 3,
-        name: 'JavaScript',
-        color: '#f0db4f',
-        Icon: FaJs
-    },
-    {
-        id: 4,
-        name: 'React',
-        color: '#61DAFB',
-        Icon: FaReact
-    },
-    {
-        id: 5,
-        name: 'Node js',
-        color: '#E34F26',
-        Icon: FaNodeJs
-    }
-];
 
 export default AboutSection;
